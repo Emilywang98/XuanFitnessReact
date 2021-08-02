@@ -24,7 +24,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   CardTitle,
   FormGroup,
   Form,
@@ -35,6 +34,7 @@ import {
 
 function User() {
   return (
+    //this is the user info section on the top left
     <>
       <div className="content">
         <Row>
@@ -54,16 +54,16 @@ function User() {
                       className="avatar border-gray"
                       src={require("assets/img/mike.jpg").default}
                     />
-                    <h5 className="title">Chet Faker</h5>
+                    <h5 className="title">Xuan-Nguyen-Marshall</h5>
                   </a>
-                  <p className="description">@chetfaker</p>
+                  <p className="description">@xuanfitness</p>
                 </div>
                 <p className="description text-center">
-                  "I like the way you work it <br />
-                  No diggity <br />I wanna bag it up"
+                  "I love working out <br />
+                  and you should too! <br /> :D"
                 </p>
               </CardBody>
-              <CardFooter>
+              {/* <CardFooter>
                 <hr />
                 <div className="button-container">
                   <Row>
@@ -87,11 +87,11 @@ function User() {
                     </Col>
                   </Row>
                 </div>
-              </CardFooter>
+              </CardFooter> */}
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Team Members</CardTitle>
+                <CardTitle tag="h4">Other members</CardTitle>
               </CardHeader>
               <CardBody>
                 <ul className="list-unstyled team-members">
@@ -112,7 +112,7 @@ function User() {
                       <Col md="7" xs="7">
                         DJ Khaled <br />
                         <span className="text-muted">
-                          <small>Offline</small>
+                          {/* <small>Offline</small> */}
                         </span>
                       </Col>
                       <Col className="text-right" md="3" xs="3">
@@ -142,9 +142,9 @@ function User() {
                         </div>
                       </Col>
                       <Col md="7" xs="7">
-                        Creative Tim <br />
+                        Emily Wang<br />
                         <span className="text-success">
-                          <small>Available</small>
+                          {/* <small>Available</small> */}
                         </span>
                       </Col>
                       <Col className="text-right" md="3" xs="3">
@@ -174,9 +174,9 @@ function User() {
                         </div>
                       </Col>
                       <Col className="col-ms-7" xs="7">
-                        Flume <br />
+                        Vivian Wu<br />
                         <span className="text-danger">
-                          <small>Busy</small>
+                          {/* <small>Busy</small> */}
                         </span>
                       </Col>
                       <Col className="text-right" md="3" xs="3">
@@ -195,113 +195,66 @@ function User() {
               </CardBody>
             </Card>
           </Col>
+
           <Col md="8">
             <Card className="card-user">
               <CardHeader>
-                <CardTitle tag="h5">Edit Profile</CardTitle>
+                <CardTitle tag="h5">Add Workout</CardTitle>
               </CardHeader>
               <CardBody>
                 <Form>
                   <Row>
                     <Col className="pr-1" md="5">
                       <FormGroup>
-                        <label>Company (disabled)</label>
+                        <label>Workout Name</label>
                         <Input
-                          defaultValue="Creative Code Inc."
-                          disabled
-                          placeholder="Company"
+                          defaultValue=""
+                          // disabled
+                          placeholder="Workout"
                           type="text"
                         />
                       </FormGroup>
                     </Col>
                     <Col className="px-1" md="3">
                       <FormGroup>
-                        <label>Username</label>
+                        <label>Reps</label>
                         <Input
-                          defaultValue="michael23"
-                          placeholder="Username"
+                          defaultValue=""
+                          placeholder="Reps"
                           type="text"
                         />
                       </FormGroup>
                     </Col>
                     <Col className="pl-1" md="4">
                       <FormGroup>
-                        <label htmlFor="exampleInputEmail1">
-                          Email address
-                        </label>
-                        <Input placeholder="Email" type="email" />
+                        <label>Weight</label>
+                        <Input placeholder="Weight" type="text" />
                       </FormGroup>
                     </Col>
-                  </Row>
-                  <Row>
+                    </Row>
+                    <Col className="pl-1" md="4">
+                      <FormGroup>
+                        <label>Number of sets</label>
+                        <Input placeholder="Sets" type="text" />
+                      </FormGroup>
+                    </Col>
                     <Col className="pr-1" md="6">
                       <FormGroup>
-                        <label>First Name</label>
+                        <label>Video Link</label>
                         <Input
-                          defaultValue="Chet"
-                          placeholder="Company"
-                          type="text"
+                          defaultValue=""
+                          placeholder="Video"
+                          type="link"
                         />
                       </FormGroup>
                     </Col>
-                    <Col className="pl-1" md="6">
-                      <FormGroup>
-                        <label>Last Name</label>
-                        <Input
-                          defaultValue="Faker"
-                          placeholder="Last Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
                   <Row>
                     <Col md="12">
                       <FormGroup>
-                        <label>Address</label>
-                        <Input
-                          defaultValue="Melbourne, Australia"
-                          placeholder="Home Address"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="4">
-                      <FormGroup>
-                        <label>City</label>
-                        <Input
-                          defaultValue="Melbourne"
-                          placeholder="City"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <FormGroup>
-                        <label>Country</label>
-                        <Input
-                          defaultValue="Australia"
-                          placeholder="Country"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pl-1" md="4">
-                      <FormGroup>
-                        <label>Postal Code</label>
-                        <Input placeholder="ZIP Code" type="number" />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md="12">
-                      <FormGroup>
-                        <label>About Me</label>
+                        <label>Comments</label>
                         <Input
                           type="textarea"
-                          defaultValue="Oh so, your weak rhyme You doubt I'll bother, reading into it"
+                          defaultValue=""
                         />
                       </FormGroup>
                     </Col>
@@ -313,15 +266,15 @@ function User() {
                         color="primary"
                         type="submit"
                       >
-                        Update Profile
+                        Add Exercise
                       </Button>
                     </div>
                   </Row>
-                </Form>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
+                  </Form>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
       </div>
     </>
   );
