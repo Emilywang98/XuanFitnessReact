@@ -20,9 +20,9 @@ import Dashboard from "views/Dashboard.js";
 import Notifications from "views/Notifications.js";
 import Icons from "views/Icons.js";
 import Typography from "views/Typography.js";
-import TableList from "views/Tables.js";
+import TableList from "views/Habits.js";
 import Maps from "views/Map.js";
-import UserPage from "views/User.js";
+import UserPage from "views/Workout.js";
 import UpgradeToPro from "views/Upgrade.js";
 
 var routes = [
@@ -33,20 +33,7 @@ var routes = [
     component: Dashboard,
     layout: "/admin",
   },
-  {
-    path: "/icons",
-    name: "Icons",
-    // icon: "nc-icon nc-diamond",
-    component: Icons,
-    layout: "/admin",
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    // icon: "nc-icon nc-pin-3",
-    component: Maps,
-    layout: "/admin",
-  },
+
   {
     path: "/notifications",
     name: "Notifications",
@@ -57,7 +44,7 @@ var routes = [
 
   //Workout page 
   {
-    path: "/User",
+    path: "/Workout",
     name: "Add Workout",
     // icon: "FaDumbbell",
     component: UserPage,
@@ -66,28 +53,13 @@ var routes = [
 
   //Habits page
   {
-    path: "/Tables",
+    path: "/Habits",
     name: "Add Habits",
     // icon: "nc-icon nc-tile-56",
     component: TableList,
     layout: "/admin",
   },
 
-  //Habits page
-  {
-    path: "/Typography",
-    name: "Nutrition",
-    // icon: "nc-icon nc-caps-small",
-    component: Typography,
-    layout: "/admin",
-  },
-  {
-    pro: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    // icon: "nc-icon nc-spaceship",
-    component: UpgradeToPro,
-    layout: "/admin",
-  },
+
 ];
 export default routes;

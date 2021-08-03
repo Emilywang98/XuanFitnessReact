@@ -1,24 +1,9 @@
-/*!
-
-=========================================================
-* Paper Dashboard React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-* Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
+/*
+Habits
 */
-import React from "react";
 
-// reactstrap components
+import React, { useState } from "react";
+
 import {
   Button,
   Card,
@@ -31,8 +16,31 @@ import {
   Row,
   Col,
 } from "reactstrap";
+ 
+function Habits() {
 
-function User() {
+  const [inputList, setInputList] = useState([{ habit: ""}]);
+ 
+  // handle input change
+  const handleInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...inputList];
+    list[index][name] = value;
+    setInputList(list);
+  };
+ 
+  // handle click event of the Remove button
+  const handleRemoveClick = index => {
+    const list = [...inputList];
+    list.splice(index, 1);
+    setInputList(list);
+  };
+ 
+  // handle click event of the Add button
+  const handleAddClick = () => {
+    setInputList([...inputList, { habit: "" }]);
+  };
+
   return (
     //this is the user info section on the top left
     <>
@@ -199,78 +207,30 @@ function User() {
           <Col md="8">
             <Card className="card-user">
               <CardHeader>
-                <CardTitle tag="h5">Add Workout</CardTitle>
+                <CardTitle tag="h5">Add Habit</CardTitle>
               </CardHeader>
               <CardBody>
                 <Form>
                   <Row>
                     <Col className="pr-1" md="5">
                       <FormGroup>
-                        <label>Workout Name</label>
+                        <label>Enter Question</label>
                         <Input
                           defaultValue=""
                           // disabled
-                          placeholder="Workout"
+                          placeholder="Question"
                           type="text"
                         />
                       </FormGroup>
-                    </Col>
-                    <Col className="px-1" md="3">
-                      <FormGroup>
-                        <label>Reps</label>
-                        <Input
-                          defaultValue=""
-                          placeholder="Reps"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pl-1" md="4">
-                      <FormGroup>
-                        <label>Weight</label>
-                        <Input placeholder="Weight" type="text" />
-                      </FormGroup>
-                    </Col>
-                    </Row>
-                    <Col className="pl-1" md="4">
-                      <FormGroup>
-                        <label>Number of sets</label>
-                        <Input placeholder="Sets" type="text" />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pr-1" md="6">
-                      <FormGroup>
-                        <label>Video Link</label>
-                        <Input
-                          defaultValue=""
-                          placeholder="Video"
-                          type="link"
-                        />
-                      </FormGroup>
-                    </Col>
-                  <Row>
-                    <Col md="12">
-                      <FormGroup>
-                        <label>Comments</label>
-                        <Input
-                          type="textarea"
-                          defaultValue=""
-                        />
-                      </FormGroup>
-                    </Col>
+                    </Col> 
+                    {/* <div className="btn-box">
+                  {inputList.length !== 1 && <button
+                    className="mr10"
+                    onClick={() => handleRemoveClick(i)}>Remove</button>}
+                  {inputList.length - 1 === i && <button onClick={handleAddClick}>Add</button>}
+            </div> */}
                   </Row>
-                  <Row>
-                    <div className="update ml-auto mr-auto">
-                      <Button
-                        className="btn-round"
-                        color="primary"
-                        type="submit"
-                      >
-                        Add Exercise
-                      </Button>
-                    </div>
-                  </Row>
-                  </Form>
+                </Form>
             </CardBody>
           </Card>
         </Col>
@@ -278,6 +238,7 @@ function User() {
       </div>
     </>
   );
+          
 }
-
-export default User;
+ 
+export default Habits;

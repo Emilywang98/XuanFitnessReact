@@ -1,6 +1,6 @@
 /*
 
-Habits
+Nutrition
 
 */
 import React from "react";
