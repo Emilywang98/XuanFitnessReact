@@ -3915,6 +3915,12 @@ License - nucleoapp.com/license/
   .card-user .image img {
     border-radius: 12px; }
 
+.card-user1 .image {
+  height: 5px; 
+  width: 5px}
+  .card-user1 .image img {
+    border-radius: 1px; }
+
 .card-user .author {
   text-align: center;
   text-transform: none;
