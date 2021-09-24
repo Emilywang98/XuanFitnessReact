@@ -1,14 +1,17 @@
 /*
 
-Nutrition
+Overview
 
 */
 import React from "react";
 // import { Chrono } from "react-chrono";
+// import Button from "./components/CustomButtonComponent";
 
 // // reactstrap components
 import { Card, CardHeader, CardBody, Row, Col, FormGroup, Input,
   Form, } from "reactstrap";
+
+const INITIAL_HEIGHT = 46;
 
 // const timeline = [{
 //   title: "May 1940",
@@ -26,6 +29,10 @@ import { Card, CardHeader, CardBody, Row, Col, FormGroup, Input,
 // </div>
 
 // export { timeline };
+function handleSubmit(e) {
+  e.preventDefault();
+  console.log('You clicked submit.');
+}
 
 
 function Overview() {
@@ -45,6 +52,7 @@ function Overview() {
                   {/**************** * WARMUPS **********************/}
                   <h2>Warmup</h2>
                   {/* Warmup 1 */}
+                  <Row>
                   <Col md="6">
                     <Card className="card-user">
                         <CardBody>
@@ -64,8 +72,29 @@ function Overview() {
                         </CardBody>
                     </Card>
                   </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
+                  </Row>
 
                   {/* Warmup 2 */}
+                  <Row>
                   <Col md="6">
                     <Card className="card-user">
                         <CardBody>
@@ -85,9 +114,30 @@ function Overview() {
                         </CardBody>
                     </Card>
                   </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
+                  </Row>
 
                   {/**************** WORKOURS **********************/}
                   <h2>Workouts</h2>
+                  <Row>
                   <Col md="6">
                     <Card className="card-user">
                         <CardBody>
@@ -107,8 +157,29 @@ function Overview() {
                         </CardBody>
                     </Card>
                   </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
+                  </Row>
 
                   {/* Warmup 2 */}
+                  <Row>
                   <Col md="6">
                     <Card className="card-user">
                         <CardBody>
@@ -128,9 +199,30 @@ function Overview() {
                         </CardBody>
                     </Card>
                   </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
+                  </Row>
 
  {/**************** HABITS **********************/}
                   <h1><strong>Habits</strong></h1>
+                  <Row>
                   <Col md="6">
                     <Card className="card-user">
                         <CardBody>
@@ -201,12 +293,33 @@ function Overview() {
                         </CardBody>
                     </Card>
                   </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
+                  </Row>
 
  {/**************** NUTRITION **********************/}
                 <h1><strong>Nutrition</strong></h1>
-                <h2>Breakfast</h2>
+                <h2>Meal 1</h2>
                 <Row>
                   <Col md="6">
+                    <Row>
                     <Card className="card-user1">
                         <CardBody>
                         <div className="image">
@@ -217,8 +330,7 @@ function Overview() {
                         </div>
                         </CardBody>
                     </Card>
-                  </Col>
-                  <Col md="6">
+                    <Col md="12">
                     <Card className="card-user1">
                         <CardBody>
                         <p className="description">
@@ -229,10 +341,34 @@ function Overview() {
                         </CardBody>
                     </Card>
                   </Col>
+                    </Row>
+                  </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
                 </Row>
-                <h2>Lunch</h2>
+
+                {/* meal 2 */}
+                <h2>Meal 2</h2>
                 <Row>
                   <Col md="6">
+                    <Row>
                     <Card className="card-user1">
                         <CardBody>
                         <div className="image">
@@ -243,22 +379,45 @@ function Overview() {
                         </div>
                         </CardBody>
                     </Card>
-                  </Col>
-                  <Col md="6">
+                    <Col md="12">
                     <Card className="card-user1">
                         <CardBody>
                         <p className="description">
                             <strong> Comments: </strong>
                             <br />
-                            Noodles for Lunch with a ton of veggies! <br />
+                            I added bacon for the extra protein you asked for. <br />
                           </p>
                         </CardBody>
                     </Card>
                   </Col>
+                    </Row>
+                  </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
                 </Row>
-                <h2>Dinner</h2>
+{/* 
+                meal 3 */}
+                <h2>Meal 3</h2>
                 <Row>
                   <Col md="6">
+                    <Row>
                     <Card className="card-user1">
                         <CardBody>
                         <div className="image">
@@ -269,19 +428,48 @@ function Overview() {
                         </div>
                         </CardBody>
                     </Card>
-                  </Col>
-                  <Col md="6">
+                    <Col md="12">
                     <Card className="card-user1">
                         <CardBody>
                         <p className="description">
                             <strong> Comments: </strong>
                             <br />
-                            Salad for dinner for extra fibre! <br />
+                            I added bacon for the extra protein you asked for. <br />
                           </p>
                         </CardBody>
                     </Card>
                   </Col>
+                    </Row>
+                  </Col>
+                  <Col>
+                  <Card>
+                    <CardBody>
+                      <div>
+                      <Col md="8" xs="8"> 
+                          <p className="text-danger"><strong>Xuan's Comments: </strong></p>
+                      </Col>
+                      <Col><FormGroup>
+                        <Input
+                          defaultValue=""
+                          // disabled
+                          placeholder="Comments"
+                          type="text"
+                        />
+                      </FormGroup></Col>
+                    </div>
+                  </CardBody>
+                    </Card>
+                  </Col>
+
                 </Row>
+                <Row>
+                <Col>
+          <form onSubmit={handleSubmit}>
+      <button type="submit">Update</button>
+    </form>
+          </Col>
+                </Row>
+
               </div> 
               </CardBody>
             </Card>
